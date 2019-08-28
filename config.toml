@@ -1,6 +1,9 @@
 baseurl = "/"
 languageCode = "en-us"
 theme = "hello-friend-ng"
+title = "Hi! I am Sartaj."
+copyright = "Sartaj Singh"
+readOtherPosts = "Read other posts"
 
 [params]
   dateform        = "Jan 2, 2006"
@@ -9,8 +12,8 @@ theme = "hello-friend-ng"
   dateformNumTime = "2006-01-02 15:04 -0700"
 
   # Metadata mostly used in document's head
-  description = "Homepage and blog by Djordje Atlialp"
-  keywords = "homepage, blog, science, informatics, development, programming"
+  description = "Homepage and blog by Sartaj Singh"
+  keywords = "homepage, blog, python, science, informatics, development, programming"
   images = [""]
 
   # Directory name of your blog content (default is `content/posts`)
@@ -18,32 +21,12 @@ theme = "hello-friend-ng"
   # Default theme "light" or "dark"
   defaultTheme = "dark"
 
-[languages]
-  [languages.en]
-    title = "Hello Friend NG"
-    subtitle = "A simple theme for Hugo"
-    keywords = ""
-    copyright = ""
-    readOtherPosts = "Read other posts"
+  homesubtitle = "Python Developer. Data Wrangler"
 
-    [languages.en.params.logo]
-      logoText = "hello friend ng"
-      logoHomeLink = "/"
-    # or
-    #
-    # path = "/img/your-example-logo.svg"
-    # alt = "Your example logo alt text"
+  [params.logo]
+    logoText = "Mothership"
+    logoHomeLink = "/"
 
-	# You can create a language based menu
-    [languages.en.menu]
-      [[languages.en.menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "/about"
-      [[languages.en.menu.main]]
-        identifier = "showcase"
-        name = "Showcase"
-        url = "/showcase"
 
 # And you can even create generic menu
 [menu]
@@ -54,4 +37,32 @@ theme = "hello-friend-ng"
   [[menu.main]]
     identifier = "blog"
     name       = "Blog"
-    url        = "/posts"
+    url = "http://blog.sartajsingh.dev"
+
+
+#[languages]
+  #[languages.en]
+    #title = "Hi! I am Sartaj."
+    #homesubtitle = "Python Developer. Data Wrangler"
+    #keywords = ""
+    #copyright = "Sartaj Singh"
+    #readOtherPosts = "Read other posts"
+
+    #[languages.en.params.logo]
+      #logoText = "Mothership"
+      #logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
+
+	# You can create a language based menu
+    #[languages.en.menu]
+      #[[languages.en.menu.main]]
+        #identifier = "about"
+        #name = "About"
+        #url = "/about"
+      #[[languages.en.menu.main]]
+        #identifier = "blog"
+        #name = "Blog"
+        #url = "/blog"
