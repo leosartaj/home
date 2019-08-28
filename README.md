@@ -1,3 +1,1 @@
 Homepage and blog
-
-WIP
