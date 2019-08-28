@@ -17,7 +17,7 @@ readOtherPosts = "Read other posts"
   images = [""]
 
   # Directory name of your blog content (default is `content/posts`)
-  contentTypeName = "posts"
+  #contentTypeName = "blog"
   # Default theme "light" or "dark"
   defaultTheme = "dark"
 
@@ -37,7 +37,7 @@ readOtherPosts = "Read other posts"
   [[menu.main]]
     identifier = "blog"
     name       = "Blog"
-    url = "http://blog.sartajsingh.dev"
+    url        = "/blog"
 
 
 #[languages]
