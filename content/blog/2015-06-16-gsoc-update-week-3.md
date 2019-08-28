@@ -1,10 +1,11 @@
 ---
-layout: post
 title: "GSoC: Update Week-3"
 date: 2015-06-16
 tags:
   - GSoC
   - SymPy
+katex: true
+markup: "mmark"
 ---
 
 This week PR-[\#9435](http://github.com/sympy/sympy/pull/9435), introducing sequences module in SymPy finally got merged. A big thanks to my mentors,
@@ -25,11 +26,11 @@ As wikipedia states
 
 > In mathematics, formal power series are a generalization of polynomials as formal objects, where the number of terms is allowed to be infinite; this implies giving up the possibility to substitute arbitrary values for indeterminates. This perspective contrasts with that of power series, whose variables designate numerical values, and which series therefore only have a definite value if convergence can be established. Formal power series are often used merely to represent the whole collection of their coefficients.
 
-Formal Power series of a functions is of the form \\( f(x) = \sum\limits\_{k=0}^\infty a\_k x^k \\)
+Formal Power series of a functions is of the form $$ f(x) = \sum\limits\_{k=0}^\infty a\_k x^k $$
 
 ### Algorithm for computing FPS of a function
 
-1. If \\( f(x) \\) or \\( f^k(x) \\) is a rational function. Apply <a name='rational' class='int-links'>rational algorithm</a>.
+1. If  $$ f(x) $$ or $$ f^k(x) $$ is a rational function. Apply <a name='rational' class='int-links'>rational algorithm</a>.
     
     1. Calculate a complex [PFD](http://en.wikipedia.org/wiki/Partial_fraction_decomposition) of f
 
@@ -39,7 +40,7 @@ Formal Power series of a functions is of the form \\( f(x) = \sum\limits\_{k=0}^
 
 2. Find a simpleDE
 
-    1. Fix a number \\( N\_{max} \in N \\) the maximal order of the DE searched for; a suitable value is \\( N\_{max} := 4 \\).
+    1. Fix a number $$ N\_{max} \in N $$ the maximal order of the DE searched for; a suitable value is $$ N\_{max} := 4 $$.
 
     2. Set N := 1
 
@@ -47,9 +48,9 @@ Formal Power series of a functions is of the form \\( f(x) = \sum\limits\_{k=0}^
 
         $$ f^k(x) + \sum\limits\_{j=0}^{k-1} A\_j f^j(x) = 0 $$
 
-        \\( A\_j \\) should be rational functions in x.
+        $$ A\_j $$ should be rational functions in x.
 
-    4. If (3) is unsuccessful, increase N by 1 and go back to (3), until N = \\( N\_{max} \\)
+    4. If (3) is unsuccessful, increase N by 1 and go back to (3), until N = $$ N\_{max} $$
 
 3. Find the corresponding <a name='RE' class='int-links'>RE</a> of the form
 
@@ -61,7 +62,7 @@ Formal Power series of a functions is of the form \\( f(x) = \sum\limits\_{k=0}^
 
 4. Check the type of RE
 
-    1. If the RE contains only one summand \\( r\_{j} a\_{n-j} \\) on it's right
+    1. If the RE contains only one summand $$ r\_{j} a\_{n-j} $$ on it's right
     hand side, then f is of hypergeometric type and RE can be solved, using
     some initial conditions.
 
@@ -77,7 +78,7 @@ Formal Power series of a functions is of the form \\( f(x) = \sum\limits\_{k=0}^
 
 * I have started implementing the Rational Algorithm.
 Initial results are promising. In sympy-master computing first 100 terms of series
-expansion of \\( \ln(1 + x) \\) takes about 2.92 sec while using rational algorithm and sequences takes
+expansion of $$ \ln(1 + x) $$ takes about 2.92 sec while using rational algorithm and sequences takes
 about 15.3 ms, that's faster by roughly a factor of 190.
 
 * Implement a ``FormalPowerSeries`` class that supports functions that are rational or their derivatives are rational, for now.
