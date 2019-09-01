@@ -23,9 +23,23 @@ readOtherPosts = "Read other posts"
 
   homesubtitle = "Python Developer. Data Wrangler"
 
+  [[params.social]]
+    name = "github"
+    url = "https://github.com/leosartaj"
+  [[params.social]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/sartaj-singh-5ab461a5"
+  [[params.social]]
+    name = "twitter"
+    url = "https://twitter.com/leosartaj03"
+  [[params.social]]
+    name = "email"
+    url = "mailto:singhsartaj94@gmail.com"
+
   [params.logo]
     logoText = "Mothership"
     logoHomeLink = "/"
+
 
 
 # And you can even create generic menu
